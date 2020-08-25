@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content='maximum-scale=1.0, initial-scale=1.0, width=device-width'>
+  <!-- tells the browser what goes in the tab -->
+  <title>Responsive Portfolio Contact</title>
+  <!-- reset the css of the browser to avoid shenanigans -->
+  <link rel="stylesheet" href="styleSheets/reset.css">
+  <!-- Bootstrap css Features -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- Bootstrap js features  -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <!-- The site's style sheet for custom css and media queries  -->
+  <link rel="stylesheet" href="styleSheets/portfolioStyles.css">
+</head>
+<body>
+  <!-- the navigation menu at the top of the screen -->
+  <nav class="navbar navbar-expand-md navbar-light">
+    <!-- the "brand" (in this case my name) which is styled differently to make it stand out  -->
+    <a href="#" class="navbar-brand bg-info">Miles Cohn</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+    <!-- the list of links, set to "ul" instead of "ol" so they're not numbered -->
+      <ul class="navbar-nav ml-auto">
+        <!-- an item within the list that contains a link  -->
+        <li class="nav-item">
+          <!-- the actual link contained within the list item  -->
+          <a href="index.html" class="nav-link">About</a>
+        </li>
+        <!-- an item within the list that contains a link  -->
+        <li class="nav-item">
+          <!-- the actual link contained within the list item  -->
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
+          <!-- an item within the list that contains a link  -->
+        <li class="nav-item">
+          <!-- the actual link contained within the list item  -->
+          <a href="#" class="nav-link currentPageLink">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>Wanna Chat?</header>
+
+  <main class="container contactBox">
+    <form>
+      <div class="form-group">
+        <label for="inputName">Name (Yours, not mine)</label>
+        <input type="email" class="form-control" id="inputName" placeholder="John Smith">
+      </div>
+      <div class="form-group">
+        <label for="inputEmail">Email address (See above)</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
+      </div>
+      <div class="form-group">
+        <label for="inputTextArea">Comments</label>
+        <textarea class="form-control" id="inputTextArea" placeholder="I'm blown away by your handsomeness" rows="3"></textarea>
+      </div>
+    </form>
+
+    <button type="button" onclick="revealPunchline()" class="btn btn-primary">Send Information</button>
+
+  </main>
+  
+  <aside id="punchline">JK, I have no interest in communicating with you</aside>
+
+  <footer>
+    <h4>Made by a crazy person</h4>
+    <p>
+        &copy; 1568 some random guy I stole the web domain from
+    </p>
+  </footer>
+
+  <script>
+    function revealPunchline(){
+      document.getElementById("punchline").style.visibility = "visible";
+    }
+  </script>
+</body>
+</html>
